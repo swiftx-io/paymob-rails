@@ -1,0 +1,29 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rake
+AllCops:
+  Exclude:
+    - "db/schema.rb"
+    - "db/seeds.rb"
+    - "config/** ^ !config/*"
+    - "bin/**/*"
+    - "public/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
+    - "**/*.erb"
+  TargetRubyVersion: 2.6.0
+
+Style/Documentation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: true
+  EnforcedStyle: always_true
+  SafeAutoCorrect: true
+Metrics/AbcSize:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 20
+Style/ClassAndModuleChildren:
+  Enabled: false
