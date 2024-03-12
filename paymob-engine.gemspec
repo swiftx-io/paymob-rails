@@ -25,5 +25,6 @@ Gem::Specification.new do |spec|
   end
 
   spec.required_ruby_version = '>= 2.6.0'
+  spec.add_dependency 'httparty'
   spec.add_dependency 'rails', '~> 6.1.4'
 end

@@ -3,11 +3,15 @@
 require 'paymob/engine/version'
 require 'paymob/engine/engine'
 require 'paymob/errors'
+require 'paymob/accept_api'
+require 'paymob/hmac'
+require 'paymob/payment'
 
 module Paymob
   module Engine
   end
   mattr_accessor :base_url,
+                 :api_key,
                  :installment_ifream_number,
                  :hmac_secret,
                  :onetime_integration_id,
@@ -18,6 +22,7 @@ module Paymob
 
   # The base url of paymob api
   self.base_url = 'https://accept.paymobsolutions.com/api'
+  self.api_key = 'api_key'
   # HMAC secret key, you can get it from account settings
   self.hmac_secret = ''
 

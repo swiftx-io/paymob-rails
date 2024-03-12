@@ -7,5 +7,8 @@ module Paymob
 
     class PaymentArgumentsMissing < StandardError
     end
+
+    class PaymobRequestError < StandardError
+    end
   end
 end
