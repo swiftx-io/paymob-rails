@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/auth/tokens
+    body:
+      encoding: UTF-8
+      string: '{"api_key":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL=="}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"token":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL=","profile":{"id":24383,"user":{"id":32356,"username":"zeiad","first_name":"","last_name":"","date_joined":"2020-09-21T15:24:10.430537","email":"zeiad@thewebops.com","is_active":true,"is_staff":false,"is_superuser":false,"last_login":null,"groups":[],"user_permissions":[160,116,119,115,213,137,204,118,131,122,128,127,203,123,140,139,130,266,124,259,121,133,206,125,129,136,185,146,126,258,135,138,205,117,120,186,132,134,277]},"created_at":"2020-09-21T15:24:10.467011","active":true,"profile_type":"Merchant","phones":["01288895918"],"company_emails":["zeiad@thewebops.com"],"company_name":"webops","state":"","country":"EGY","city":"cairo","postal_code":"","street":"","email_notification":false,"order_retrieval_endpoint":null,"delivery_update_endpoint":null,"logo_url":null,"failed_attempts":0,"password":null,"custom_export_columns":[],"server_IP":[],"username":null,"profile_phash":"72dcbdbf6d8792bcd3fe59fd0262e7d0ce17e87fd89a8907314de1c978c6d2d7","awb_banner":null,"email_banner":null,"identification_number":null,"delivery_status_callback":"","merchant_external_link":null,"deactivated_by_bank":false,"bank_deactivation_reason":null,"bank_merchant_status":0,"national_id":null,"super_agent":null,"wallet_limit_profile":null,"address":null,"commercial_registration":null,"commercial_registration_area":null,"distributor_code":null,"distributor_branch_code":null,"allow_terminal_order_id":false,"allow_encryption_bypass":false,"wallet_phone_number":null,"suspicious":0,"latitude":null,"longitude":null,"bank_staffs":{},"bank_rejection_reason":null,"bank_received_documents":false,"bank_merchant_digital_status":0,"bank_digital_rejection_reason":null,"filled_business_data":true,"acq_partner":null,"bank_related":null,"permissions":[]}}'
+  recorded_at: Wed, 13 Mar 2024 02:00:23 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/ecommerce/orders
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL=","merchant_id":24383,"delivery_needed":false,"currency":"EGP","amount_cents":100000,"merchant_order_id":7479116}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Date:
+      - Mon, 21 Sep 2020 19:10:29 GMT
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"id":6191662,"created_at":"2020-09-21T21:10:29.502183","delivery_needed":false,"merchant":{"id":24383,"created_at":"2020-09-21T15:24:10.467011","phones":["01288895918"],"company_emails":["zeiad@thewebops.com"],"company_name":"webops","state":"","country":"EGY","city":"cairo","postal_code":"","street":""},"collector":null,"amount_cents":100000,"shipping_data":null,"shipping_details":null,"currency":"EGP","is_payment_locked":false,"is_return":false,"is_cancel":false,"is_returned":false,"is_canceled":false,"merchant_order_id":"7479116","wallet_notification":null,"paid_amount_cents":0,"notify_user_with_email":false,"items":[],"order_url":"https://accept.paymobsolutions.com/standalone?ref=i_s7vu","commission_fees":0,"delivery_fees_cents":0,"delivery_vat_cents":0,"payment_method":"tbc","merchant_staff_tag":null,"api_source":"OTHER","pickup_data":null,"delivery_status":[],"data":{},"token":"s7vu","url":"https://accept.paymobsolutions.com/standalone?ref=i_s7vu"}'
+  recorded_at: Mon, 21 Sep 2020 19:10:29 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/acceptance/payment_keys
+    body:
+      encoding: UTF-8
+      string: '{"auth_token":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL=","amount_cents":"1000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000100010001000","order_id":6191662,"currency":"EGP","integration_id":"52464","billing_data":{"email":"user_84b05f62c5e39391b0cd177c22bc206d@example.com","first_name":"factory","last_name":"Name","building":"NA","apartment":"NA","street":"NA","floor":"NA","city":"NA","phone_number":"01200000001","country":"NA"}}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"token":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL=="}'
+  recorded_at: Mon, 21 Sep 2020 19:10:35 GMT
+- request:
+    method: post
+    uri: https://accept.paymobsolutions.com/api/acceptance/payments/pay
+    body:
+      encoding: UTF-8
+      string: '{"payment_token":"KFwVJsmnYktkewukrIR4zvwIMhTkrB7BDaZIpdir+WybGHKfVol4BU++2WoAETLntnrteVR/v6to3+JPUassMfOvXR1bC/7iN7UKTb7T770g92pGKA6u3LFLrRIy6Ijr7hVnau8UpcfACWuxVHgcRGiKXX9BJw86AkM+aAVs8MM4PXFik+KqVJ2LPhblsFTf/PANykGXoQbTSEOYAMXJfc/Qu5fB/XIEsgUPuI0zMxd7xYjY4WJz2dmHCpP/V/QJt88SGnM6p4ekdzpG7oOkmrFcVutKGFokMPMfG80ivewJixuXDMrxywHSqBzg1hvW6RUZ7Edf7qmQlkYp0pJKPCKzP28Z4XYL0LTLLLNdxvez9oXtswjL24M+CBoG9A49Ajx1a+A4joJ1UXH1/uOa/08KckHgTAo6MrN1Lb4J+j/yMR205J8Xsul77H0xVyJPNuSJiZHWknU949yAqw14IlslL7WzKy3Cmek2LIEhWukda2Vpf9r2bsiAncRnMVfB1Xt3eoXAD4f5XwVYC0bL==","source":{"identifier":"01010101010","subtype":"WALLET"}}'
+    headers:
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"redirect_url":"https://accept.paymobsolutions.com/api/acceptance/wallet_other_test/wallet_template?token=ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklsUnlZVzV6WVdOMGFXOXVJaXdpZEhKaGJuTmhZM1JwYjI1ZmNHc2lPakUyT1RrME1qazNOU3dpYzNWaVgzUjVjR1VpT2lKM1lXeHNaWFFpZlEueUZHSXE3Y2ZYcVRydmVCNjQ0SG01dVNZSTlPRDZydlUwamtOazNpci1keEt1RVBOWG9kd3UwWFNwUGRibnhNVmQtbE41TmdwZ2xSaUxwY0VJeWxsWWc="}'
+  recorded_at: Thu, 14 Mar 2024 09:21:07 GMT
+recorded_with: VCR 6.1.0

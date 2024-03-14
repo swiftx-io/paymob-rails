@@ -2,7 +2,7 @@
 
 class Hmac
   def self.calculate(hash)
-    concatenated_params = flatten(hash).sort.to_h.values.join
+    concatenated_params = flatten(hash.to_h).sort.to_h.values.join
     OpenSSL::HMAC.hexdigest('SHA512', hmac_key, concatenated_params)
   end
 

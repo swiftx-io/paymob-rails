@@ -89,7 +89,7 @@ module Paymob
     private
 
     def api_key
-      raise PaymobCredentialsMissing, 'API Key is required' if Paymob.api_key.blank?
+      raise Errors::PaymobCredentialsMissing, 'API Key is required' if Paymob.api_key.blank?
 
       Paymob.api_key
     end
@@ -98,11 +98,11 @@ module Paymob
       case payment_type
       when :installment, :wallet, :onetime
         integration_id = Paymob.try("#{payment_type}_integration_id")
-        raise PaymobCredentialsMissing, "#{payment_type}_integration_id is required" if integration_id.blank?
+        raise Errors::PaymobCredentialsMissing, "#{payment_type}_integration_id is required" if integration_id.blank?
 
         integration_id
       else
-        raise PaymobCredentialsMissing,
+        raise Errors::PaymobCredentialsMissing,
               "#{payment_type} dose not exists, available values [:installment, :wallet, :onetime]"
       end
     end
