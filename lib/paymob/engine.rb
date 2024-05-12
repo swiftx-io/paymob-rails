@@ -5,7 +5,10 @@ require 'paymob/engine/engine'
 require 'paymob/errors'
 require 'paymob/accept_api'
 require 'paymob/hmac'
-require 'paymob/payment'
+require 'paymob/base'
+require 'paymob/payment_types/onetime'
+require 'paymob/payment_types/wallet'
+require 'paymob/payment_types/installment'
 
 module Paymob
   module Engine

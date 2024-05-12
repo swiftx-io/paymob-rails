@@ -31,10 +31,10 @@ module HmacHelpers
   end
 
   def self.correct_hmac
-    Hmac.calculate(response_example)
+    Paymob::Hmac.calculate(response_example)
   end
 
   def self.wrong_hmac
-    Hmac.calculate(response_example.merge('success' => false))
+    Paymob::Hmac.calculate(response_example.merge('success' => false))
   end
 end

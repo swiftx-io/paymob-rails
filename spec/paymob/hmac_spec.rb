@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Hmac do
+RSpec.describe Paymob::Hmac do
   # These examples from paymob docs: https://docs.paymob.com/docs/hmac-calculation#transaction-processedresponse-callback
   describe '#match_original' do
     before do
@@ -11,7 +11,7 @@ RSpec.describe Hmac do
 
     context 'when request params hash matches the original hmac' do
       it 'returns true' do
-        expect(Hmac.matches_original?(HmacHelpers.response_example, HmacHelpers.correct_hmac)).to eq(true)
+        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.correct_hmac)).to eq(true)
       end
     end
 
@@ -21,7 +21,7 @@ RSpec.describe Hmac do
       end
 
       it 'returns false' do
-        expect(Hmac.matches_original?(HmacHelpers.response_example, HmacHelpers.wrong_hmac)).to eq(false)
+        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.wrong_hmac)).to eq(false)
       end
     end
   end

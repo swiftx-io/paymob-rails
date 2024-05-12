@@ -18,14 +18,14 @@ module Paymob
       self.class.headers 'Content-Type' => 'application/json'
     end
 
-    def self.new_payment(amount:, payment_reference:, payment_type:, billing_data: {})
-      api = new(amount: amount, billing_data: billing_data, payment_reference: payment_reference,
-                payment_type: payment_type)
-      api.authenticate
-      api.create_order
-      api.request_payment_key
-      api
-    end
+    # def self.new_payment(amount:, payment_reference:, payment_type:, billing_data: {})
+    #   api = new(amount: amount, billing_data: billing_data, payment_reference: payment_reference,
+    #             payment_type: payment_type)
+    #   api.authenticate
+    #   api.create_order
+    #   api.request_payment_key
+    #   api
+    # end
 
     def authenticate
       response = self.class.post('/auth/tokens', { body: { api_key: api_key }.to_json }).parsed_response
@@ -49,7 +49,7 @@ module Paymob
       raise Errors::PaymobRequestError, body if @order_id.blank?
     end
 
-    def request_payment_key
+    def request_payment_key(integration_id)
       response = self.class.post('/acceptance/payment_keys', body: {
         auth_token: auth_token,
         amount_cents: amount.to_i * 100,
@@ -92,19 +92,6 @@ module Paymob
       raise Errors::PaymobCredentialsMissing, 'API Key is required' if Paymob.api_key.blank?
 
       Paymob.api_key
-    end
-
-    def integration_id
-      case payment_type
-      when :installment, :wallet, :onetime
-        integration_id = Paymob.try("#{payment_type}_integration_id")
-        raise Errors::PaymobCredentialsMissing, "#{payment_type}_integration_id is required" if integration_id.blank?
-
-        integration_id
-      else
-        raise Errors::PaymobCredentialsMissing,
-              "#{payment_type} dose not exists, available values [:installment, :wallet, :onetime]"
-      end
     end
   end
 end
