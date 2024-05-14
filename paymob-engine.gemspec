@@ -28,5 +28,6 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'httparty'
   spec.add_dependency 'net-http'
   spec.add_dependency 'rails', '~> 6.1.4'
-  spec.add_development_dependency 'rspec-rails'
+  spec.add_development_dependency 'rspec-rails', '~> 6.1.0'
+  spec.metadata['rubygems_mfa_required'] = 'true'
 end

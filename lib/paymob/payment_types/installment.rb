@@ -1,15 +1,19 @@
 # frozen_string_literal: true
 
-class Paymob::PaymentTypes::Installment < Paymob::Base
-  def payment_link
-    return if @accept_api.payment_key.blank?
+module Paymob
+  module PaymentTypes
+    class Installment < Paymob::Base
+      def payment_link
+        return if @accept_api.payment_key.blank?
 
-    "#{Paymob.ifream_link}#{Paymob.installment_ifream_number}?payment_token=#{@accept_api.payment_key}"
-  end
+        "#{Paymob.ifream_link}#{Paymob.installment_ifream_number}?payment_token=#{@accept_api.payment_key}"
+      end
 
-  private
+      private
 
-  def integration_id
-    Paymob.installment_integration_id
+      def integration_id
+        Paymob.installment_integration_id
+      end
+    end
   end
 end

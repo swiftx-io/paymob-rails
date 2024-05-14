@@ -11,7 +11,7 @@ RSpec.describe Paymob::Hmac do
 
     context 'when request params hash matches the original hmac' do
       it 'returns true' do
-        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.correct_hmac)).to eq(true)
+        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.correct_hmac)).to be(true)
       end
     end
 
@@ -21,7 +21,7 @@ RSpec.describe Paymob::Hmac do
       end
 
       it 'returns false' do
-        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.wrong_hmac)).to eq(false)
+        expect(described_class.matches_original?(HmacHelpers.response_example, HmacHelpers.wrong_hmac)).to be(false)
       end
     end
   end

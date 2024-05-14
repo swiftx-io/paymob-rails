@@ -13,8 +13,9 @@ AllCops:
     - "tmp/**/*"
     - "vendor/**/*"
     - "**/*.erb"
+    - "test/**/*"
   TargetRubyVersion: 2.6.0
-
+  NewCops: enable
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
@@ -26,4 +27,14 @@ Metrics/AbcSize:
 Metrics/MethodLength:
   Max: 20
 Style/ClassAndModuleChildren:
+  Enabled: false
+RSpec/StubbedMock:
+  Enabled: false
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+RSpec/ExpectInHook:
   Enabled: false

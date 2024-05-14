@@ -6,8 +6,6 @@ module Paymob
     REQUIRED_PAYMENT_FIELDS = %i[amount billing_data payment_reference].freeze
     attr_accessor :accept_api
 
-    def initialize; end
-
     def initialize_order(payment_params)
       validate_payment_params(payment_params)
       @accept_api = AcceptAPI.new(amount: payment_params[:amount], billing_data: payment_params[:billing_data],

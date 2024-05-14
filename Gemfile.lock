@@ -261,7 +261,7 @@ DEPENDENCIES
   paymob-engine!
   pg (~> 1.1)
   puma
-  rspec-rails
+  rspec-rails (~> 6.1.0)
   rubocop (~> 1.10)
   rubocop-performance
   rubocop-rails

@@ -15,16 +15,10 @@ module HmacHelpers
       'is_3d_secure' => true,
       'integration_id' => 6741,
       'has_parent_transaction' => false,
-      'order' => {
-        'id' => 4_778_239
-      },
+      'order' => { 'id' => 4_778_239 },
       'created_at' => '2020-03-25T18:39:44.719228',
       'currency' => 'EGP',
-      'source_data' => {
-        'pan' => '2346',
-        'type' => 'card',
-        'sub_type' => 'MasterCard'
-      },
+      'source_data' => { 'pan' => '2346', 'type' => 'card', 'sub_type' => 'MasterCard' },
       'error_occured' => false,
       'owner' => 4705
     }
