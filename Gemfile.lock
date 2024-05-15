@@ -4,7 +4,7 @@ PATH
     paymob-engine (0.1.0)
       httparty
       net-http
-      rails (~> 6.1.4)
+      rails (>= 6.1.4)
 
 GEM
   remote: https://rubygems.org/
