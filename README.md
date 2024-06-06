@@ -55,13 +55,13 @@ Use the `Paymob::PaymentTypes::Onetime` class:
 
 ```ruby
 payment_data = {
-  amount: "Your value in numbers", 
+  amount: "Your value in numbers",
   billing_data: {
-    first_name: "Test", 
+    first_name: "Test",
     last_name: "Account",
     email: "test@email.com",
     phone_number:"01111111111"
-  }, 
+  },
   payment_reference: "Your generated payment reference"
 }
 onetime = Paymob::PaymentTypes::Onetime.new
@@ -75,13 +75,13 @@ Use the `Paymob::PaymentTypes::Wallet` class:
 `Note`: you must pass the mobile number wallet you need to pay from it
 ```ruby
 payment_data = {
-  amount: "Your value in numbers", 
+  amount: "Your value in numbers",
   billing_data: {
-    first_name: "Test", 
+    first_name: "Test",
     last_name: "Account",
     email: "test@email.com",
     phone_number:"01111111111"
-  }, 
+  },
   payment_reference: "Your generated payment reference"
 }
 onetime = Paymob::PaymentTypes::Wallet.new
@@ -93,13 +93,13 @@ onetime.payment_link(mobile_number: '01010101010')
 Use the `Paymob::PaymentTypes::Installment` class:
 ```ruby
 payment_data = {
-  amount: "10", 
+  amount: "10",
   billing_data: {
-    first_name: "Test", 
+    first_name: "Test",
     last_name: "Account",
     email: "test@email.com",
     phone_number:"01111111111"
-  }, 
+  },
   payment_reference: "ERTY"
 }
 onetime = Paymob::PaymentTypes::Installment.new
@@ -114,7 +114,7 @@ The `Paymob::Hmac` class provides helpful methods for handling HMAC operations. 
 
 This method accepts a hash of parameters and returns the HMAC for these parameters.
 
-Example: 
+Example:
 ```ruby
 hmac = Paymob::Hmac.calculate(params_hash) # 6d9bb40e5b46b7166bb032cb075c8921
 ```
@@ -129,28 +129,6 @@ match = Paymob::Hmac.matches_original?(response_params, original_hmac) # true
 ## Contributing
 
 We welcome contributions to improve paymob-rails! Whether you want to fix a bug, implement a new feature, or suggest improvements, we appreciate your efforts.
-
-To contribute to this project, follow these steps:
-
-1. **Fork the Repository**: Start by forking the repository to your GitHub account.
-
-2. **Clone the Repository**: Clone the forked repository to your local machine.
-
-3. **Create a Branch**: Create a new branch for your contribution.
-
-4. **Make Changes**: Make your desired changes to the codebase.
-
-5. **Test**: Ensure that the changes you made pass all existing tests, and if necessary, add new tests to cover the changes.
-
-6. **Commit Changes**: Commit your changes with a descriptive commit message.
-
-7. **Push Changes**: Push your changes to your forked repository.
-
-8. **Create a Pull Request**: Go to the [original repository](link-to-your-repo) and create a pull request. Be sure to provide a detailed description of your changes and the problem they solve.
-
-9. **Review**: Once your pull request is submitted, it will be reviewed by the maintainers. You may need to address any feedback or comments before it can be merged.
-
-Thank you for considering contributing to paymob-rails! Your involvement makes this project better for everyone.
 
 Feel free to customize this template to suit the specific guidelines and processes of your project.
 
