@@ -84,9 +84,9 @@ payment_data = {
   },
   payment_reference: "Your generated payment reference"
 }
-onetime = Paymob::PaymentTypes::Wallet.new
-onetime.initialize_order(payment_data)
-onetime.payment_link(mobile_number: '01010101010')
+wallet = Paymob::PaymentTypes::Wallet.new
+wallet.initialize_order(payment_data)
+wallet.payment_link(mobile_number: '01010101010')
 ```
 
 ### 5. Create an Installment Payment
@@ -100,11 +100,11 @@ payment_data = {
     email: "test@email.com",
     phone_number:"01111111111"
   },
-  payment_reference: "ERTY"
+  payment_reference: "Your generated payment reference"
 }
-onetime = Paymob::PaymentTypes::Installment.new
-onetime.initialize_order(payment_data)
-onetime.payment_link
+installment = Paymob::PaymentTypes::Installment.new
+installment.initialize_order(payment_data)
+installment.payment_link
 ```
 
 ## How to evaluate the HMAC
