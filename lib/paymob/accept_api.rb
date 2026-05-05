@@ -40,7 +40,7 @@ module Paymob
                                    merchant_id: merchant_id,
                                    delivery_needed: false,
                                    currency: 'EGP',
-                                   amount_cents: amount.to_i * 100,
+                                   amount_cents: amount.to_f * 100,
                                    merchant_order_id: payment_reference
                                  }.to_json)
       body = response.parsed_response
@@ -52,7 +52,7 @@ module Paymob
     def request_payment_key(integration_id)
       response = self.class.post('/acceptance/payment_keys', body: {
         auth_token: auth_token,
-        amount_cents: amount.to_i * 100,
+        amount_cents: amount.to_f * 100,
         order_id: order_id,
         currency: 'EGP',
         integration_id: integration_id,
